@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public float speed;
 
+    // [SerializeField] private GameObject mySceneManagementObject;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,8 @@ public class Enemy : MonoBehaviour
         if (other.tag == gameObject.tag)
         {
             // TODO add stuff
+            // mySceneManagementObject.GetComponent<SceneManagementScript>().AddPoint();
+
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
